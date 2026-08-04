@@ -1,0 +1,176 @@
+.resultsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  animation: fadeIn 0.4s ease;
+}
+
+.summaryCard {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid var(--border-highlight);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.summaryCard::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.summaryCardHeader {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.summaryCardBadge {
+  display: inline-block;
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-glow);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.summaryCardTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.summaryCardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.summaryCardItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.summaryCardLabel {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.summaryCardVal {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.summaryCardValHighlight {
+  color: var(--accent);
+}
+
+.apiMessageBox {
+  background: rgba(129, 140, 248, 0.1);
+  border: 1px solid rgba(129, 140, 248, 0.25);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  color: #c7d2fe;
+}
+
+.apiMessageBoxTitle {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.tableCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.tableCardHeader {
+  margin-bottom: 1.25rem;
+}
+
+.tableCardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.tableCardSubtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.tableResponsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.resultsTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.resultsTable th {
+  background: var(--bg-dark);
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.resultsTable td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.emptyResults {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2rem 1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .summaryCard {
+    padding: 1.25rem;
+  }
+
+  .summaryCardTitle {
+    font-size: 1.35rem;
+  }
+
+  .summaryCardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tableCard {
+    padding: 1rem;
+  }
+
+  .resultsTable {
+    font-size: 0.85rem;
+  }
+
+  .resultsTable th, 
+  .resultsTable td {
+    padding: 0.6rem 0.75rem;
+  }
+}

@@ -1,0 +1,78 @@
+.heroSection {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.heroSectionTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSectionDescription {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.errorCard {
+  background: var(--error-bg);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.errorCardIcon {
+  font-size: 1.75rem;
+}
+
+.errorCardTitle {
+  color: #fca5a5;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.errorCardMessage {
+  color: #f8fafc;
+  font-size: 0.95rem;
+}
+
+.errorCardTip {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+.idleBanner {
+  background: var(--bg-card);
+  border: 1px dashed var(--border-highlight);
+  border-radius: var(--radius-lg);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.idleBannerIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.idleBanner h3 {
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .heroSectionTitle {
+    font-size: 1.65rem;
+  }
+}

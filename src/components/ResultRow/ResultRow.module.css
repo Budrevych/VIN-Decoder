@@ -1,0 +1,37 @@
+.resultRow {
+  /* Row base */
+}
+
+.resultRow:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.resultRowVariable {
+  font-weight: 600;
+  width: 45%;
+}
+
+.resultRowLink {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.resultRowLink:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.resultRowValue {
+  /* Value cell */
+}
+
+.resultRowBadge {
+  display: inline-block;
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: #e2e8f0;
+  font-weight: 500;
+}
